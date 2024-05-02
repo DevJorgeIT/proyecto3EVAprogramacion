@@ -6,6 +6,7 @@ package gestores;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -29,17 +30,18 @@ public class GestorFicheros {
     String ruta = "usuarios.txt";
 
     
-        try {
+        
             fichSalida = new FileOutputStream(ruta);
-        oos = new ObjectOutputStream(fichSalida);
-        oos.writeObject(p);
-    }
-    catch (IOException e
-
-    
-        ) {
+            oos = new ObjectOutputStream(fichSalida);
+            oos.writeObject(u);
+            
+       
+            try{
+         }catch(FileNotFoundException ex){
+            System.out.println("Archivo no encontrado");   
+         }catch (IOException e ) {
             System.out.println("Se produjo un error en la apertura o escritura en el fichero");
-    }
+           }
 
     
         finally{
