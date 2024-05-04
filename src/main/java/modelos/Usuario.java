@@ -19,8 +19,8 @@ public class Usuario implements Serializable{
     private String telefono;
     private Boolean enviar;
 
-    public Usuario(String nick, String password, String email, String telefono, Boolean enviar) {
-        this.nick = nick;
+    public Usuario(String nick, String password, String email, String telefono, Boolean enviar) throws MyException {
+        setNick(nick);
         this.password = password;
         this.email = email;
         this.telefono = telefono;
@@ -31,9 +31,9 @@ public class Usuario implements Serializable{
         return nick;
     }
 
-    public void setNick(String nick) {
+    public void setNick(String nick) throws MyException {
         if (nick.isBlank()) {
-            throw new MyException("");
+            throw new MyException("El nick no puede estar nulo, o con un espacio");
         }
         this.nick = nick;
     }
