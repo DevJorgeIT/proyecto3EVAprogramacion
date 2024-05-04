@@ -4,13 +4,14 @@
  */
 package modelos;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author AluDAM
  */
-public class Usuario {
+public class Usuario implements Serializable{
     private String nick;
     private String password;
     private String email;

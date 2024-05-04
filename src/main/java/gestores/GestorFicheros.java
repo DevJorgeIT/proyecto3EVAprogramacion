@@ -12,6 +12,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import modelos.Usuario;
 
 /**
@@ -28,35 +30,4 @@ public class GestorFicheros {
         
         String ruta = "persona.obj";
         
-        try {
-            fichSalida = new FileOutputStream(ruta);
-            oos = new ObjectOutputStream(fichSalida) ;
-            oos.writeObject(u);
-        } catch (IOException e) {
-            throw new MyException("Se produjo un error en la apertura o escritura en el fichero");
-        }
-        finally{
-            try {
-                if (oos != null) {
-                     oos.close();
-                }
-                if (fichSalida != null) {
-                    fichSalida.close();
-                }
-            } catch (IOException e) {
-                System.out.println("No consiguio cerrar el fichero correctamente");
-            }
-            
-            System.out.println("Se leyó el objeto persona con los datos: " + p.toString());
-            
-            try {
-                  FileInputStream fis = new FileInputStream("ruta");
-                  ObjectInputStream pobj = new ObjectInputStream(fis);
-                 
-              Persona pe = (Persona) pobj.readObject();
-              
-              System.out.println(pe);
-            } catch (Exception e) {
-            } 
-        }
 }
