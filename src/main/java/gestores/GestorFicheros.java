@@ -4,14 +4,14 @@
  */
 package gestores;
 
-import java.io.File;
+
+
+import excepciones.MyException;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-
 import modelos.Usuario;
 
 /**
@@ -19,53 +19,44 @@ import modelos.Usuario;
  * @author AluDAM
  */
 public class GestorFicheros {
-
-    FileOutputStream fichSalida = null;
-    ObjectOutputStream oos = null;
-    FileInputStream fichEntrada = null;
-    ObjectInputStream ois = null;
-
-    Usuario u = new Usuario("crisbar","1111","crisbar@cris.com","666888777", false);
-   
-    String ruta = "usuarios.txt";
-
-    
+        FileOutputStream fichSalida = null;
+        ObjectOutputStream oos = null;
+        FileInputStream fichEntrada = null;
+        ObjectInputStream ois= null;
         
+        Usuario u = new Usuario("Jorge","1234","ejemplo@gmail.com","456789451", true);
+        
+        String ruta = "persona.obj";
+        
+        try {
             fichSalida = new FileOutputStream(ruta);
-            oos = new ObjectOutputStream(fichSalida);
+            oos = new ObjectOutputStream(fichSalida) ;
             oos.writeObject(u);
-            
-       
-            try{
-         }catch(FileNotFoundException ex){
-            System.out.println("Archivo no encontrado");   
-         }catch (IOException e ) {
-            System.out.println("Se produjo un error en la apertura o escritura en el fichero");
-           }
-
-    
+        } catch (IOException e) {
+            throw new MyException("Se produjo un error en la apertura o escritura en el fichero");
+        }
         finally{
             try {
-            if (oos != null) {
-                oos.close();
+                if (oos != null) {
+                     oos.close();
+                }
+                if (fichSalida != null) {
+                    fichSalida.close();
+                }
+            } catch (IOException e) {
+                System.out.println("No consiguio cerrar el fichero correctamente");
             }
-            if (fichSalida != null) {
-                fichSalida.close();
-            }
-        } catch (IOException e) {
-            System.out.println("No consiguio cerrar el fichero correctamente");
+            
+            System.out.println("Se leyó el objeto persona con los datos: " + p.toString());
+            
+            try {
+                  FileInputStream fis = new FileInputStream("ruta");
+                  ObjectInputStream pobj = new ObjectInputStream(fis);
+                 
+              Persona pe = (Persona) pobj.readObject();
+              
+              System.out.println(pe);
+            } catch (Exception e) {
+            } 
         }
-
-        System.out.println("Se leyó el objeto persona con los datos: " + p.toString());
-
-        try {
-            FileInputStream fis = new FileInputStream("ruta");
-            ObjectInputStream pobj = new ObjectInputStream(fis);
-
-            Persona pe = (Persona) pobj.readObject();
-
-            System.out.println(pe);
-        } catch (Exception e) {
-        }
-
-    }
+}
