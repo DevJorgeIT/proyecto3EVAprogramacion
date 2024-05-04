@@ -66,14 +66,20 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         etiContraseñaEntrar.setForeground(new java.awt.Color(0, 0, 0));
         etiContraseñaEntrar.setText("Contraseña");
 
+        botonEntrar.setBackground(new java.awt.Color(102, 102, 255));
+        botonEntrar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         botonEntrar.setText("ENTRAR");
 
-        textNickEntrar.setBackground(new java.awt.Color(204, 204, 204));
+        textNickEntrar.setBackground(new java.awt.Color(229, 229, 255));
         textNickEntrar.setForeground(new java.awt.Color(0, 0, 0));
+        textNickEntrar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
 
-        textContraseñaEntrar.setBackground(new java.awt.Color(204, 204, 204));
+        textContraseñaEntrar.setBackground(new java.awt.Color(229, 229, 255));
         textContraseñaEntrar.setForeground(new java.awt.Color(0, 0, 0));
+        textContraseñaEntrar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
 
+        botonOlvidadoContraseña.setBackground(new java.awt.Color(102, 102, 255));
+        botonOlvidadoContraseña.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         botonOlvidadoContraseña.setText("¿Has olvidado la contraseña?");
 
         lineaSeparador.setForeground(new java.awt.Color(0, 51, 255));
@@ -81,39 +87,51 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         etiImagen.setForeground(new java.awt.Color(0, 0, 0));
         etiImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/825575.png"))); // NOI18N
 
+        etiNickRegistrarse.setFont(new java.awt.Font("Source Sans Pro", 0, 14)); // NOI18N
         etiNickRegistrarse.setForeground(new java.awt.Color(0, 0, 0));
         etiNickRegistrarse.setText("Nick");
 
+        etiEmailRegistrarse.setFont(new java.awt.Font("Source Sans Pro", 0, 14)); // NOI18N
         etiEmailRegistrarse.setForeground(new java.awt.Color(0, 0, 0));
         etiEmailRegistrarse.setText("Correo electrónico");
 
+        etiTelefonoRegistrarse.setFont(new java.awt.Font("Source Sans Pro", 0, 14)); // NOI18N
         etiTelefonoRegistrarse.setForeground(new java.awt.Color(0, 0, 0));
         etiTelefonoRegistrarse.setText("Teléfono");
 
+        etiContraseñaRegistrarse.setFont(new java.awt.Font("Source Sans Pro", 0, 14)); // NOI18N
         etiContraseñaRegistrarse.setForeground(new java.awt.Color(0, 0, 0));
         etiContraseñaRegistrarse.setText("Contraseña");
 
+        etiRepiteContraseñaRegistrarse.setFont(new java.awt.Font("Source Sans Pro", 0, 14)); // NOI18N
         etiRepiteContraseñaRegistrarse.setForeground(new java.awt.Color(0, 0, 0));
         etiRepiteContraseñaRegistrarse.setText("Repetir Contraseña");
 
-        textNickRegistrarse.setBackground(new java.awt.Color(204, 204, 204));
+        textNickRegistrarse.setBackground(new java.awt.Color(229, 229, 255));
         textNickRegistrarse.setForeground(new java.awt.Color(0, 0, 0));
+        textNickRegistrarse.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
 
-        textEmailRegistrarse.setBackground(new java.awt.Color(204, 204, 204));
+        textEmailRegistrarse.setBackground(new java.awt.Color(229, 229, 255));
         textEmailRegistrarse.setForeground(new java.awt.Color(0, 0, 0));
+        textEmailRegistrarse.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
 
-        textTelefonoRegistrarse.setBackground(new java.awt.Color(204, 204, 204));
+        textTelefonoRegistrarse.setBackground(new java.awt.Color(229, 229, 255));
         textTelefonoRegistrarse.setForeground(new java.awt.Color(0, 0, 0));
+        textTelefonoRegistrarse.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
 
-        textContraseñaRegistrarse.setBackground(new java.awt.Color(204, 204, 204));
+        textContraseñaRegistrarse.setBackground(new java.awt.Color(229, 229, 255));
         textContraseñaRegistrarse.setForeground(new java.awt.Color(0, 0, 0));
+        textContraseñaRegistrarse.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
 
-        textRepetirContraseñaRegistrarse.setBackground(new java.awt.Color(204, 204, 204));
+        textRepetirContraseñaRegistrarse.setBackground(new java.awt.Color(229, 229, 255));
         textRepetirContraseñaRegistrarse.setForeground(new java.awt.Color(0, 0, 0));
+        textRepetirContraseñaRegistrarse.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
 
         confirmacionRecibirInformacion.setForeground(new java.awt.Color(0, 0, 0));
         confirmacionRecibirInformacion.setText("Deseo recibir información cada diez minutos");
 
+        botonRegistrarse.setBackground(new java.awt.Color(102, 102, 255));
+        botonRegistrarse.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         botonRegistrarse.setText("REGISTRARSE");
 
         javax.swing.GroupLayout fondoLayout = new javax.swing.GroupLayout(fondo);
@@ -159,7 +177,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                                     .addComponent(etiTelefonoRegistrarse, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(etiContraseñaRegistrarse, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(etiRepiteContraseñaRegistrarse, javax.swing.GroupLayout.Alignment.TRAILING))
-                                .addGap(45, 45, 45)))
+                                .addGap(27, 27, 27)))
                         .addGroup(fondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(textEmailRegistrarse, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(textContraseñaRegistrarse)

@@ -4,6 +4,7 @@
  */
 package modelos;
 
+import excepciones.MyException;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -31,6 +32,9 @@ public class Usuario implements Serializable{
     }
 
     public void setNick(String nick) {
+        if (nick.isBlank()) {
+            throw new MyException("");
+        }
         this.nick = nick;
     }
 
